@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Cart from './Cart';
 import Hamburger from './Hamburger';
-import Dropdown from './Dropdown';
+import Dropdown from './Hamburger/Dropdown';
 import SearchIcon from '../SVG/SearchIcon';
 
 function Header() {
@@ -15,8 +15,7 @@ function Header() {
     <header>
       <div className="bg-customOrange flex items-center justify-center py-3.5 2xl:py-6 text-primary text-sm md:text-base 2xl:text-lg">
         <div className="flex gap-2">
-          <p>Unique offers as a member.</p>
-          <a href="#" className="border-b border-primary font-medium">Join the club.</a>
+          <p className='font-medium'>Free shipping on orders over $100</p>
         </div>
       </div>
 
@@ -28,7 +27,7 @@ function Header() {
             <input
               type="text"
               placeholder="Search through 11,345 products..."
-              className="focus:outline-none w-full"
+              className="focus:outline-none w-full bg-customGrey"
             />
 
             <SearchIcon/>

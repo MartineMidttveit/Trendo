@@ -1,12 +1,14 @@
-import Header from "../components/Header";
+import React from 'react';
+import Header from '../components/Header';
 
 function Frontpage() {
-    return (
-      <main>
-        <Header/>
+  return (
+    <div className='bg-custom-bg min-h-screen w-full'>
+      <main className='bg-customGrey'>
+        <Header />
       </main>
-    );
-  }
-  
-  export default Frontpage;
+    </div>
+  );
+}
 
+export default Frontpage;

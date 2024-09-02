@@ -9,6 +9,10 @@ module.exports = {
         customOrange: '#D6A689',
         primary: '#242122',
         secondary: '#6B6B6B',
+        customGrey: '#FAF8F6'
+      },
+      backgroundImage: {
+        'custom-bg': "url('/background.png')",  
       },
     },
   },

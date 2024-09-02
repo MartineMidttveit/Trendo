@@ -21,5 +21,7 @@ code {
   padding-left: 10%;
 }
 
-
+input::placeholder {
+  color: #6B6B6B;
+}
 

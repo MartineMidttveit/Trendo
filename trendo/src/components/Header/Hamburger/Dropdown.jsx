@@ -1,11 +1,11 @@
 import React from 'react';
-import SearchIcon from '../SVG/SearchIcon';
+import SearchIcon from '../../SVG/SearchIcon';
 
 function Dropdown({ isMenuOpen }) {
   if (!isMenuOpen) return null;
 
   return (
-    <div className="lg:hidden flex flex-col text-primary py-4 w-2/3">
+    <div className="lg:hidden flex flex-col text-primary py-4 w-2/3 bg-customGrey">
       <div className="rounded-full w-full border border-primary">
         <div className="flex items-center justify-between px-4 py-2">
           <input
