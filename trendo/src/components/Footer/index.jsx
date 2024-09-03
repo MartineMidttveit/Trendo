@@ -11,7 +11,7 @@ function Footer() {
 
                     <div className='flex flex-col gap-3'>
                         <h4 className='font-medium 2xl:text-lg'>Terms</h4>
-                        <p>Copyright 2024 Trendo</p>
+                        <p>Copyright © 2024 Trendo</p>
                         <p>Terms & conditions</p>
                         <p>Privacy policy</p>
                     </div>
@@ -32,7 +32,6 @@ function Footer() {
                         <Newsletter/>
                     </div>
                 </div>
-                
             </div>
         </footer>
     )
