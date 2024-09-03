@@ -25,3 +25,7 @@ input::placeholder {
   color: #6B6B6B;
 }
 
+.wrap {
+  margin-right: 7.5%;
+  margin-left: 7.5%;
+}

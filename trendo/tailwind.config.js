@@ -11,9 +11,6 @@ module.exports = {
         secondary: '#6B6B6B',
         customGrey: '#FAF8F6'
       },
-      backgroundImage: {
-        'custom-bg': "url('/background.png')",  
-      },
     },
   },
   plugins: [],
