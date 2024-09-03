@@ -12,11 +12,9 @@ function Header() {
   };
 
   return (
-    <header className='absolute w-full top-0'>
-      <div className="bg-customOrange flex items-center justify-center py-3.5 2xl:py-6 text-primary text-sm md:text-base 2xl:text-lg">
-        <div className="flex gap-2">
+    <header className='fixed z-10 w-full'>
+      <div className="bg-customOrange flex py-3 items-center justify-center text-primary text-sm md:text-base 2xl:text-lg">
           <p className='font-medium'>Free shipping on orders over $100</p>
-        </div>
       </div>
 
       <div className="flex justify-between items-center wrapper py-6 2xl:text-lg text-primary bg-customGrey shadow-lg">
