@@ -1,38 +1,103 @@
 import React from 'react';
 import CloseIcon from '../../SVG/CloseIcon';
 import ClockIcon from '../../SVG/ClockIcon';
+import StarIcon from '../../SVG/StarIcon';
 
 function SearchResults() {
   return (
     <div className="absolute z-10 flex justify-center top-[145px] w-full h-full bg-black bg-opacity-20">
         <div className='bg-customGrey h-fit w-[40rem] flex flex-col items-start relative px-12 py-8'>
             <div className='flex justify-between items-center w-full'>
-                <p className='font-bold 2xl:text-xl'>Search results</p>
+                <div className='flex items-center 2xl:text-xl gap-2'>
+                    <p className='font-bold'>Search results</p>
+                    <span className='font-semibold text-secondary'>(3)</span>
+                </div>
+                
                 <CloseIcon/>
             </div>
 
-            <div className='flex flex-col gap-3 text-left'>
-                <p className='2xl:text-lg py-4'>The search for "rpkrj" gave 0 results.</p>
-                <button className='bg-customOrange 2xl:px-8 2xl:py-3 text-primary font-medium 2xl:text-lg hover:shadow-lg duration-300'>Browse products</button>
+{/* No search results */}
+            <div className='hidden'>
+                <div className='flex flex-col gap-3 text-left'>
+                    <p className='2xl:text-lg py-4'>The search for "rpkrj" gave 0 results.</p>
+                    <button className='bg-customOrange 2xl:px-8 2xl:py-3 text-primary font-medium 2xl:text-lg hover:shadow-lg duration-300'>Browse products</button>
+                </div>
+
+                <div className='border-t border-secondary mt-8 w-full text-left'>
+                    <p className='2xl:text-lg font-semibold pt-6'>Trending now</p>
+                    <span className='flex gap-3 items-center pt-3 pb-1'>
+                        <ClockIcon/>
+                        Hairdryer
+                    </span>
+
+                    <span className='flex gap-3 items-center py-1'>
+                        <ClockIcon/>
+                        Phonecase
+                    </span>
+
+                    <span className='flex gap-3 items-center py-1'>
+                        <ClockIcon/>
+                        Lipstick
+                    </span>
+                </div>
             </div>
 
-            <div className='border-t border-secondary mt-8 w-full text-left'>
-                <p className='2xl:text-lg font-semibold pt-6'>Most recent search</p>
-                <span className='flex gap-3 items-center pt-3 pb-1'>
-                    <ClockIcon/>
-                    Hairdryer
-                </span>
+{/* When there are search results */}
+            
+        
+            <div className='flex pt-6 items-start w-full text-left'>
+                <img src="/hairdryer.jpg" alt="" className='h-20 w-20 object-cover border' />
 
-                <span className='flex gap-3 items-center py-1'>
-                    <ClockIcon/>
-                    Phonecase
-                </span>
-
-                <span className='flex gap-3 items-center py-1'>
-                    <ClockIcon/>
-                    Lipstick
-                </span>
+                <div className='flex flex-col w-full'>
+                    <div className='flex w-full items-center justify-between pl-10'>
+                        <p className='font-semibold 2xl:text-lg'>Product title here</p>
+                        <span className='flex items-center gap-1'>
+                            <StarIcon/>
+                            <StarIcon/>
+                            <StarIcon/>
+                            <StarIcon/>
+                        </span>
+                    </div>
+                    <p className='pl-10 font-medium'>$150.00</p>
+                </div>
             </div>
+
+            <div className='flex pt-6 items-start w-full text-left'>
+                <img src="/hairdryer.jpg" alt="" className='h-20 w-20 object-cover border' />
+
+                <div className='flex flex-col w-full'>
+                    <div className='flex w-full items-center justify-between pl-10'>
+                        <p className='font-semibold 2xl:text-lg'>Product title here</p>
+                        <span className='flex items-center gap-1'>
+                            <StarIcon/>
+                            <StarIcon/>
+                            <StarIcon/>
+                            <StarIcon/>
+                        </span>
+                    </div>
+                    <p className='pl-10 font-medium'>$50.00</p>
+                </div>
+            </div>
+
+            <div className='flex pt-6 items-start w-full text-left'>
+                <img src="/hairdryer.jpg" alt="" className='h-20 w-20 object-cover border' />
+
+                <div className='flex flex-col w-full'>
+                    <div className='flex w-full items-center justify-between pl-10'>
+                        <p className='font-semibold 2xl:text-lg'>Product title here</p>
+                        <span className='flex items-center gap-1'>
+                            <StarIcon/>
+                            <StarIcon/>
+                            <StarIcon/>
+                            <StarIcon/>
+                        </span>
+                    </div>
+                    <p className='pl-10 font-medium'>$30.00</p>
+                </div>
+            </div>
+
+            <button className='bg-customOrange 2xl:px-8 2xl:py-3 mt-6 w-full text-primary font-medium 2xl:text-lg hover:shadow-lg duration-300'>View all results</button>
+
         </div>
     </div>
   );
