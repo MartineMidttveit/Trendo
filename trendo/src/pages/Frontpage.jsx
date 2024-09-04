@@ -2,19 +2,20 @@ import React from 'react';
 import Header from '../components/Header';
 import Cards from '../components/Cards';
 import Footer from '../components/Footer';
+import SearchResults from '../components/Header/Searchbar/SearchResults';
 
 function Frontpage() {
   return (
-      <main className="text-primary font-barlow">
+      <main className="text-primary font-barlow relative">
         <Header/>
-        
+          <SearchResults/>
             <div className="bg-customGrey shadow-lg">
 
               <div className="flex justify-center relative">
                 <img src="/image.png" alt="Woman with sunglasses in front of a wall of leaves and flowers" className="w-full object-cover h-screen"/>
 
                 <div className='absolute left-0 mt-16 top-1/3 text-customGrey text-left wrapper'>
-                  <p className='text-3xl font-medium mb-5'>SAVE UP TO 20% EXTRA ON THE</p>
+                  <p className='text-2xl font-medium mb-5'>SAVE UP TO 20% EXTRA ON THE</p>
                   <h1 className='text-8xl font-medium'>Summer sale</h1>
                   <p className='text-3xl mt-8'>Don't miss out — shop now for the best deals!</p>
 
