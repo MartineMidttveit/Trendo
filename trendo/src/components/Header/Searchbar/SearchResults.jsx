@@ -6,8 +6,8 @@ import StarIcon from '../../SVG/StarIcon';
 function SearchResults() {
   return (
     <div className="absolute z-10 flex justify-center top-[145px] w-full h-full bg-black bg-opacity-20">
-        <div className='bg-customGrey h-fit w-[40rem] flex flex-col items-start relative px-12 py-8'>
-            <div className='flex justify-between items-center w-full'>
+        <div className='bg-customGrey h-fit w-[40rem] flex flex-col items-start relative py-12'>
+            <div className='flex justify-between items-center w-full px-12'>
                 <div className='flex items-center 2xl:text-xl gap-2'>
                     <p className='font-bold'>Search results</p>
                     <span className='font-semibold text-secondary'>(3)</span>
@@ -17,7 +17,7 @@ function SearchResults() {
             </div>
 
 {/* No search results */}
-            <div className='hidden'>
+            <div className='hidden px-12'>
                 <div className='flex flex-col gap-3 text-left'>
                     <p className='2xl:text-lg py-4'>The search for "rpkrj" gave 0 results.</p>
                     <button className='bg-customOrange 2xl:px-8 2xl:py-3 text-primary font-medium 2xl:text-lg hover:shadow-lg duration-300'>Browse products</button>
@@ -44,8 +44,9 @@ function SearchResults() {
 
 {/* When there are search results */}
             
-        
-            <div className='flex pt-6 items-start w-full text-left'>
+
+            <p className='2xl:text-lg pt-4 pb-6 pl-12'>The search for "rty" gave 3 results.</p>
+            <div className='flex py-4 items-start w-full text-left hover:bg-customDarkGray duration-75 px-12'>
                 <img src="/hairdryer.jpg" alt="" className='h-20 w-20 object-cover border' />
 
                 <div className='flex flex-col w-full'>
@@ -62,7 +63,7 @@ function SearchResults() {
                 </div>
             </div>
 
-            <div className='flex pt-6 items-start w-full text-left'>
+            <div className='flex py-4 items-start w-full text-left hover:bg-customDarkGray duration-75 px-12'>
                 <img src="/hairdryer.jpg" alt="" className='h-20 w-20 object-cover border' />
 
                 <div className='flex flex-col w-full'>
@@ -79,7 +80,7 @@ function SearchResults() {
                 </div>
             </div>
 
-            <div className='flex pt-6 items-start w-full text-left'>
+            <div className='flex py-4 items-start w-full text-left hover:bg-customDarkGray duration-75 px-12'>
                 <img src="/hairdryer.jpg" alt="" className='h-20 w-20 object-cover border' />
 
                 <div className='flex flex-col w-full'>
@@ -96,8 +97,7 @@ function SearchResults() {
                 </div>
             </div>
 
-            <button className='bg-customOrange 2xl:px-8 2xl:py-3 mt-6 w-full text-primary font-medium 2xl:text-lg hover:shadow-lg duration-300'>View all results</button>
-
+            <button className='ml-12 bg-customOrange 2xl:px-16 2xl:py-3 mt-3 text-primary font-medium 2xl:text-lg hover:shadow-lg duration-300'>View all results</button> 
         </div>
     </div>
   );
