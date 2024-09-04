@@ -17,6 +17,7 @@ function SearchResults() {
             </div>
 
 {/* No search results */}
+
             <div className='hidden px-12'>
                 <div className='flex flex-col gap-3 text-left'>
                     <p className='2xl:text-lg py-4'>The search for "rpkrj" gave 0 results.</p>
@@ -44,7 +45,6 @@ function SearchResults() {
 
 {/* When there are search results */}
             
-
             <p className='2xl:text-lg pt-4 pb-6 pl-12'>The search for "rty" gave 3 results.</p>
             <div className='flex py-4 items-start w-full text-left hover:bg-customDarkGray duration-75 px-12'>
                 <img src="/hairdryer.jpg" alt="" className='h-20 w-20 object-cover border' />
