@@ -6,10 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        customOrange: '#D6A689',
+        customGreen: '#17150B',
+        customOrange: '#BD9979',
         primary: '#242122',
         secondary: '#6B6B6B',
-        customGrey: '#FAF8F6'
+        customGrey: '#FAF8F6',
+      },
+      fontFamily: {
+        barlow: ['Barlow', 'sans-serif'],
       },
     },
   },

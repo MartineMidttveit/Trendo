@@ -13,7 +13,7 @@ function Header() {
 
   return (
     <header className='fixed z-10 w-full'>
-      <div className="bg-customOrange flex py-3 items-center justify-center text-primary text-sm md:text-base 2xl:text-lg">
+      <div className="bg-customGreen flex py-3 items-center justify-center text-customGrey text-sm md:text-base 2xl:text-lg">
           <p className='font-medium'>Free shipping on orders over $100</p>
       </div>
 
