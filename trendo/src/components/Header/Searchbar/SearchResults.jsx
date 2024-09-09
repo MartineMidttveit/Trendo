@@ -5,7 +5,7 @@ import StarIcon from '../../SVG/StarIcon';
 
 function SearchResults() {
   return (
-    <div className="absolute z-10 flex justify-center top-[145px] w-full h-full bg-black bg-opacity-20">
+    <div className="absolute z-10 justify-center top-[145px] w-full h-full bg-black bg-opacity-20 flex">
         <div className='bg-customGrey h-fit w-[40rem] flex flex-col items-start relative py-12'>
             <div className='flex justify-between items-center w-full px-12'>
                 <div className='flex items-center 2xl:text-xl gap-2'>
@@ -45,6 +45,7 @@ function SearchResults() {
 
 {/* When there are search results */}
             
+
             <p className='2xl:text-lg pt-4 pb-6 pl-12'>The search for "rty" gave 3 results.</p>
             <div className='flex py-4 items-start w-full text-left hover:bg-customDarkGray duration-75 px-12'>
                 <img src="/hairdryer.jpg" alt="" className='h-20 w-20 object-cover border' />
@@ -100,6 +101,7 @@ function SearchResults() {
             <button className='ml-12 bg-customOrange 2xl:px-16 2xl:py-3 mt-3 text-primary font-medium 2xl:text-lg hover:shadow-lg duration-300'>View all results</button> 
         </div>
     </div>
+           
   );
 }
 

@@ -22,11 +22,11 @@ function Header() {
         
         <SearchBar/>
 
-        <div className="hidden lg:flex w-2/5 justify-end items-center">
+        <nav className="hidden lg:flex w-2/5 justify-end items-center">
           <p>Home</p>
           <p className="px-8">Contact</p>
           <Cart />
-        </div>
+        </nav>
 
         {/* Hamburger Menu and Cart Icon for smaller screens */}
         <div className="lg:hidden flex items-center">
