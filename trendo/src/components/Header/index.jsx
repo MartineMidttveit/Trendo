@@ -31,7 +31,9 @@ function Header() {
         {/* Hamburger Menu and Cart Icon for smaller screens */}
         <div className="lg:hidden flex items-center">
           <Hamburger isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-          <Cart />
+          <button>
+            <Cart />
+          </button>
         </div>
       </div>
 

@@ -2,9 +2,9 @@ import ClockIcon from '../../SVG/ClockIcon';
 
 function NoResults() {
     return (
-        <div className='hidden px-12'>
+        <div className='px-12 w-full'>
             <div className='flex flex-col gap-3'>
-                <button className='bg-customOrange 2xl:px-8 2xl:py-3 text-primary font-medium 2xl:text-lg hover:shadow-lg duration-300'>Browse products</button>
+                <button className='bg-customOrange 2xl:px-8 2xl:py-3 text-primary font-medium 2xl:text-lg hover:shadow-lg duration-300 w-1/2'>Browse products</button>
             </div>
 
             <div className='border-t border-secondary mt-8 w-full text-left'>

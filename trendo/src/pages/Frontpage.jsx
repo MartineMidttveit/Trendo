@@ -1,18 +1,17 @@
 import React from 'react';
-import Header from '../components/Header';
 import Cards from '../components/Cards';
-import Footer from '../components/Footer';
 import SearchBar from '../components/Header/Searchbar';
-
-import useFetch from '../hooks/useFetch';
+import { useContext } from 'react';
+import { productContext } from '../components/Providers';
 
 function Frontpage() {
 
-const [value, setValue] = useFetch();
+const {products, setProducts} = useContext(productContext)
+
+
 
   return (
       <main className="text-primary font-barlow relative">
-        <Header/>
             <div className="bg-customGrey shadow-lg">
 
               <div className="flex justify-center relative">
@@ -44,9 +43,8 @@ const [value, setValue] = useFetch();
                 </div>
               </div>
             
-              <Cards products={value}/>
+              <Cards products={products}/>
             </div>
-          <Footer/>
       </main>
   );
 }
