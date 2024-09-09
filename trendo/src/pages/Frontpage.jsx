@@ -4,8 +4,11 @@ import Cards from '../components/Cards';
 import Footer from '../components/Footer';
 import Search from '../components/Header/Searchbar/Search';
 
+import useFetch from '../hooks/useFetch';
+
 function Frontpage() {
 
+const [value, setValue] = useFetch();
 
   return (
       <main className="text-primary font-barlow relative">
@@ -42,7 +45,7 @@ function Frontpage() {
                 </div>
               </div>
             
-              <Cards/>
+              <Cards products={value}/>
             </div>
           <Footer/>
       </main>
