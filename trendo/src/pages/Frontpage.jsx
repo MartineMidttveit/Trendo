@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Cards from '../components/Cards';
 import Footer from '../components/Footer';
-import Search from '../components/Header/Searchbar/Search';
+import SearchBar from '../components/Header/Searchbar';
 
 import useFetch from '../hooks/useFetch';
 
@@ -13,7 +13,6 @@ const [value, setValue] = useFetch();
   return (
       <main className="text-primary font-barlow relative">
         <Header/>
-          <Search/>
             <div className="bg-customGrey shadow-lg">
 
               <div className="flex justify-center relative">

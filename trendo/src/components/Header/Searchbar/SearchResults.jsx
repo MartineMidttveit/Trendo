@@ -3,9 +3,8 @@ import Thumbnail from './Thumbnail';
 
 function SearchResults() {
   return (
-    <div className='text-left w-full'>
-        <p className='2xl:text-lg pt-4 pb-6 pl-12'>The search for "rty" gave 3 results.</p>
-       
+    <div className='w-full'>
+
         <Thumbnail/>
         <Thumbnail/>
         <Thumbnail/>
