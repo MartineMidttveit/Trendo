@@ -2,13 +2,13 @@ import React from 'react';
 import Header from '../components/Header';
 import Cards from '../components/Cards';
 import Footer from '../components/Footer';
-import SearchResults from '../components/Header/Searchbar/SearchResults';
+import Search from '../components/Header/Searchbar/Search';
 
 function Frontpage() {
   return (
       <main className="text-primary font-barlow relative">
         <Header/>
-          <SearchResults/>
+          <Search/>
             <div className="bg-customGrey shadow-lg">
 
               <div className="flex justify-center relative">
