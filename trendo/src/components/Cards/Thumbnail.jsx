@@ -5,7 +5,8 @@ function Thumbnail() {
     <div className="w-full">
 
 {/* Product image */}
-      <div className="bg-black h-96 2xl:h-[30rem] relative hover:opacity-90 duration-100">
+      <div className="relative hover:opacity-90 duration-100">
+        <img src="/hairdryer.jpg" alt="" className='h-96 2xl:h-[30rem] object-cover'/>
         <span className='bg-customGrey absolute top-5 right-5 px-5 py-1 font-medium'>
           SALE
         </span>

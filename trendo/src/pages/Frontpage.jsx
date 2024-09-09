@@ -5,6 +5,8 @@ import Footer from '../components/Footer';
 import Search from '../components/Header/Searchbar/Search';
 
 function Frontpage() {
+
+
   return (
       <main className="text-primary font-barlow relative">
         <Header/>
