@@ -30,3 +30,23 @@ input::placeholder {
   color: #6B6B6B;
 }
 
+@media (min-width: 640px) {
+  /* Styles for sm */
+}
+
+/* Medium screens (md) - min-width: 768px */
+@media (min-width: 0px) and (max-width: 1279px) {
+  .wrapper {
+    padding-right: 7.5%;
+    padding-left: 7.5%;
+  }
+}
+
+/* Large screens (lg) - min-width: 1024px */
+@media (min-width: 1280px) {
+  .wrapper {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
