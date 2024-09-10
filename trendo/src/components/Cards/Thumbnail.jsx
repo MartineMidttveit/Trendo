@@ -6,8 +6,8 @@ function Thumbnail({product}) {
 
 {/* Product image */}
       <div className="relative hover:opacity-90 duration-100">
-        <img src={product.image.url} alt="Product image" className='h-96 2xl:h-[30rem] object-cover w-full'/>
-          {product.discountedPrice < product.price && <span className='bg-customGrey absolute top-5 right-5 px-5 py-1 font-medium shadow-md'>
+        <img src={product.image.url} alt="Product image" className='h-96 md:h-[20rem] lg:h-[22rem] 2xl:h-[30rem] object-cover w-full'/>
+          {product.discountedPrice < product.price && <span className='bg-customGrey absolute top-5 right-5 px-5 py-1 font-medium shadow-md text-sm lg:text-base'>
           SALE
         </span>}
       </div>

@@ -18,11 +18,11 @@ function Header() {
       </div>
 
       <div className="flex justify-between items-center wrapper py-6 2xl:text-lg text-primary bg-customGrey shadow-lg">
-        <h1 className="font-bold text-2xl 2xl:text-4xl w-2/5 flex items-start">Trendo</h1>
+        <h1 className="font-bold text-2xl 2xl:text-4xl w-1/4 xl:w-2/5 flex items-start">Trendo</h1>
         
         <SearchBar/>
 
-        <nav className="hidden lg:flex w-2/5 justify-end items-center">
+        <nav className="hidden lg:flex w-1/4 xl:w-2/5 justify-end items-center">
           <p>Home</p>
           <p className="px-8">Contact</p>
           <Cart />

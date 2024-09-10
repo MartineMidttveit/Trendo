@@ -17,10 +17,10 @@ const {products, setProducts} = useContext(productContext)
               <div className="flex justify-center items-center relative">
                 <img src="/image.png" alt="Woman with sunglasses in front of a wall of leaves and flowers" className="w-full object-cover h-screen"/>
 
-                <div className='absolute left-0 xl:mt-16 xl:top-1/3 text-customGrey text-left wrapper bg-black bg-opacity-60 h-screen w-screen flex flex-col justify-center xl:bg-transparent xl:block xl:h-auto'>
-                  <p className='text-lg xl:text-2xl font-medium mb-2 xl:mb-5 pt-28'>SAVE UP TO 20% EXTRA ON THE</p>
-                  <h1 className='text-4xl xl:text-8xl font-bold xl:font-medium'>Summer sale</h1>
-                  <p className='xl:text-3xl mt-3 2xl:mt-8'>Don't miss out — shop now for the best deals!</p>
+                <div className='absolute left-0 text-customGrey text-left wrapper bg-black bg-opacity-60 h-screen w-screen flex flex-col justify-center xl:bg-transparent xl:block xl:h-auto'>
+                  <p className='text-lg xl:text-xl 2xl:text-2xl font-medium mb-2 2xl:mb-5 pt-28'>SAVE UP TO 20% EXTRA ON THE</p>
+                  <h1 className='text-4xl xl:text-8xl 2xl:text-8xl font-bold xl:font-medium'>Summer sale</h1>
+                  <p className='xl:text-2xl 2xl:text-3xl mt-3 2xl:mt-8'>Don't miss out — shop now for the best deals!</p>
 
                   <button 
                     className='
@@ -32,9 +32,11 @@ const {products, setProducts} = useContext(productContext)
                     text-sm
                     2xl:px-8 
                     2xl:py-3 
+                    xl:mt-8
                     2xl:mt-10 
                     text-primary 
                     font-medium 
+                    lg:text-base
                     2xl:text-lg 
                     hover:bg-customGrey 
                     hover:text-customGreen 

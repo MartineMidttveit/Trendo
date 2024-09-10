@@ -20,8 +20,8 @@ function SearchBar() {
   }
 
   return (
-    <div className="relative w-1/3 flex justify-center">
-        <div className="flex items-center justify-between px-4 py-2 w-3/4 border-b border-secondary">
+    <div className="relative lg:w-1/2 2xl:w-6/7 flex justify-center">
+        <div className="hidden lg:flex items-center justify-between px-4 py-2 lg:w-3/4 xl:w-full 2xl:w-3/4 border-b border-secondary">
             <input
                 type="text"
                 placeholder="Search through 11,345 products..."
