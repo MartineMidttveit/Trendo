@@ -3,6 +3,7 @@ import Cart from './Cart';
 import Hamburger from './Hamburger';
 import Dropdown from './Hamburger/Dropdown';
 import SearchBar from './Searchbar';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,13 +19,13 @@ function Header() {
       </div>
 
       <div className="flex justify-between items-center wrapper py-6 2xl:text-lg text-primary bg-customGrey shadow-lg">
-        <h1 className="font-bold text-2xl 2xl:text-4xl w-1/4 xl:w-2/5 flex items-start">Trendo</h1>
+        <Link to="/" className="font-bold text-2xl 2xl:text-4xl w-1/4 xl:w-2/5 flex items-start">Trendo</Link>
         
         <SearchBar/>
 
         <nav className="hidden lg:flex w-1/4 xl:w-2/5 justify-end items-center">
-          <p>Home</p>
-          <p className="px-8">Contact</p>
+          <Link to="/">Home</Link>
+          <Link to="/contact" className="px-8">Contact</Link>
           <Cart />
         </nav>
 
