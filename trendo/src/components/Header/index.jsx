@@ -14,7 +14,7 @@ function Header() {
   return (
     <header className='relative lg:fixed z-20 w-full font-barlow'>
       <div className="bg-customGreen flex py-3 items-center justify-center text-customGrey text-sm md:text-base 2xl:text-lg">
-          <p className='font-medium'>Free shipping on orders over $100</p>
+          <p className='font-medium'>Free shipping on orders over $ 100</p>
       </div>
 
       <div className="flex justify-between items-center wrapper py-6 2xl:text-lg text-primary bg-customGrey shadow-lg">
