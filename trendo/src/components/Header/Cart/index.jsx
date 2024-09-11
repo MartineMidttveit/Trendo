@@ -10,7 +10,6 @@ function Cart() {
         <CartIcon />
         <CartAmount/>
       </div>
-
     </div>
   );
 }

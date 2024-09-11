@@ -3,7 +3,7 @@ import Newsletter from './Newsletter';
 
 function Footer() {
     return (
-        <footer className='bg-customOrange py-6'>
+        <footer className='bg-customOrange py-6 font-barlow'>
             <div className='wrapper flex flex-col lg:flex-row lg:justify-between mx-auto w-full'>
                 <h3 className='text-left text-lg 2xl:text-xl font-bold my-4 lg:my-0'>Trendo</h3>
 
