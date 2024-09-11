@@ -8,8 +8,6 @@ function Frontpage() {
 
 const {products, setProducts} = useContext(productContext)
 
-
-
   return (
       <main className="text-primary font-barlow relative">
             <div className="bg-customGrey shadow-lg">
@@ -18,9 +16,9 @@ const {products, setProducts} = useContext(productContext)
                 <img src="/image.png" alt="Woman with sunglasses in front of a wall of leaves and flowers" className="w-full object-cover h-screen"/>
 
                 <div className='absolute left-0 text-customGrey text-left wrapper bg-black bg-opacity-60 h-screen w-screen flex flex-col justify-center xl:bg-transparent xl:block xl:h-auto'>
-                  <p className='text-lg xl:text-xl 2xl:text-2xl font-medium mb-2 2xl:mb-5 pt-28'>SAVE UP TO 20% EXTRA ON THE</p>
-                  <h1 className='text-4xl xl:text-8xl 2xl:text-8xl font-bold xl:font-medium'>Summer sale</h1>
-                  <p className='xl:text-2xl 2xl:text-3xl mt-3 2xl:mt-8'>Don't miss out — shop now for the best deals!</p>
+                  <p className='text-lg lg:text-xl 2xl:text-2xl font-medium mb-2 2xl:mb-5 pt-28'>SAVE UP TO 20% EXTRA ON THE</p>
+                  <h1 className='text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold xl:font-medium'>Summer sale</h1>
+                  <p className='lg:text-2xl 2xl:text-3xl mt-3 2xl:mt-8'>Don't miss out — shop now for the best deals!</p>
 
                   <button 
                     className='
@@ -32,6 +30,7 @@ const {products, setProducts} = useContext(productContext)
                     text-sm
                     2xl:px-8 
                     2xl:py-3 
+                    lg:mt-6
                     xl:mt-8
                     2xl:mt-10 
                     text-primary 
