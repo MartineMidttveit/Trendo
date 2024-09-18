@@ -13,6 +13,7 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
   return (
     <header className='relative lg:sticky top-0 z-20 w-full font-barlow'>
       <div className="bg-customGreen flex py-3 items-center justify-center text-customGrey text-sm md:text-base 2xl:text-lg">

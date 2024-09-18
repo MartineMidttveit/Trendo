@@ -18,9 +18,8 @@ function SearchContainer({ onClose, searchValue }) {
 
   }, [searchValue])
 
-  console.log(products)
   return (
-    <div className="absolute z-10 justify-center top-[69px] w-screen h-screen bg-black bg-opacity-20 flex font-barlow">
+    <div className="absolute z-10 justify-center top-[4.313rem] w-screen h-screen bg-black bg-opacity-20 flex font-barlow">
       <div className='bg-customGrey h-fit lg:w-[30rem] xl:w-[35rem] 2xl:w-[40rem] flex flex-col items-start relative py-10 2xl:py-12'>
         <div className='flex justify-between items-center w-full px-8 2xl:px-12'>
           <div className='flex items-center 2xl:text-xl gap-2'>
