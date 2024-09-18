@@ -7,11 +7,11 @@ import Providers from "./Providers"
 
 export default function Layout() {
     return (
-    <Providers>
-        <Header />
-    <Outlet />
-        <Footer />
-    </Providers>
-    
+        <Providers>
+            <Header />
+            <Outlet />
+            <Footer />
+        </Providers>
+
     )
 }
