@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { productContext } from '../components/Providers'
+import { useCart } from '../hooks/useCart'
 import ChevronRight from '../components/SVG/ChevronRight'
 import StarIcon from '../components/SVG/StarIcon'
 import useCurrencyFormatter from '../hooks/useCurrencyFormatter'
@@ -9,6 +10,7 @@ import HeartIcon from '../components/SVG/HeartIcon'
 const Product = () => {
   const { productId } = useParams()
   const { products } = useContext(productContext)
+  const { addItemToCart } = useCart()
 
 
   const formattedPrice = useCurrencyFormatter()
@@ -88,7 +90,7 @@ const Product = () => {
 
 
           <div className='flex items-center gap-8 lg:flex-row flex-col'>
-            <button type='button' className='bg-[#D6A689] text-black text-lg max-w-[10.438rem] h-11 w-full rounded-[38px]'>Add to cart</button>
+            <button type='button' className='bg-beige-reddish text-black text-lg max-w-[10.438rem] h-11 w-full rounded-[38px]' onClick={() => addItemToCart(product)}>Add to cart</button>
             <button type='button' className='flex items-center gap-3 text-lg'><HeartIcon /> Save to wishlist</button>
           </div>
 

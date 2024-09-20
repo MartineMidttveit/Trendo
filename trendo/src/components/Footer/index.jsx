@@ -7,12 +7,10 @@ function Footer() {
     const { productId } = useParams()
     const link = useHref()
 
-    const isCart = link.replace('/', '') === 'cart'
-
-
+    const noFooterRender = ['/cart', '/checkout']
     const getCurrentYear = new Date().getFullYear()
 
-    if(isCart) return null
+    if (noFooterRender.includes(link)) return null
 
     return (
         <footer
