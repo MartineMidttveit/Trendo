@@ -10,8 +10,6 @@ const Cart = () => {
   const { cart, totalPrice, increaseQuantity, decreaseQuantity } = useCart()
   const formattedPrice = useCurrencyFormatter()
 
-
-  console.log(cart)
   return (
     <div className='flex flex-col lg:flex-row'>
       <div
@@ -57,8 +55,8 @@ const Cart = () => {
                         <div className="font-semibold text-lg">{product.title}</div>
                       </div>
                       <div className='flex gap-1'>
-                        <span className="text-gray-400 line-through">{formattedPrice(product?.discountedPrice)}</span>
-                        <span className="font-bold">{formattedPrice(product?.price)}</span>
+                        <span className="text-gray-400 line-through">{formattedPrice(product?.price)}</span>
+                        <span className="font-bold">{formattedPrice(product?.discountedPrice)}</span>
                       </div>
 
                       <div className='items-center gap-5 flex'>
@@ -80,8 +78,8 @@ const Cart = () => {
                     </div>
                   </div>
                   <div className='lg:flex-col lg:gap-0 gap-2.5 lg:flex hidden'>
-                    <span className="text-gray-400 line-through">{formattedPrice(product?.discountedPrice)}</span>
-                    <span className="font-bold">{formattedPrice(product?.price)}</span>
+                    <span className="text-gray-400 line-through">{formattedPrice(product?.price)}</span>
+                    <span className="font-bold">{formattedPrice(product?.discountedPrice)}</span>
                   </div>
 
                   <div className='items-center gap-5 hidden lg:flex'>
@@ -105,7 +103,15 @@ const Cart = () => {
           <strong className='text-lg font-semibold block text-left mb-6'>Cart summary</strong>
           <div className='flex items-center justify-between'>
             <span className='text-lg'>Subtotal:</span>
-            <span>$ 119.8</span>
+            <div>
+              {cart.map(product => (
+                <div key={product.id} className='flex flex-col items-end'>
+                  <span className='font-semibold'>{product.title} {product.quantity}x</span>
+                  <span>{formattedPrice(product.discountedPrice * product.quantity)}</span>
+                </div>
+              ))}
+            </div>
+
           </div>
 
           <div className='flex items-center justify-between'>
@@ -133,7 +139,9 @@ const Cart = () => {
         </div>
 
         <div className='flex lg:gap-2.5 gap-5 lg:flex-row flex-col pb-10'>
-          <button className='rounded ring-1 ring-black uppercase p-4 lg:w-2/4'>Shop More</button>
+          <Link className='lg:w-2/4 w-full' to="/">
+            <button className='rounded ring-1 ring-black uppercase p-4 w-full'>Shop More</button>
+          </Link>
           <Link className='lg:w-2/4 w-full' to="/checkout">
             <button className='rounded bg-beige-reddish uppercase p-4 w-full'>Checkout</button>
           </Link>

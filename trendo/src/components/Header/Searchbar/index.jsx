@@ -1,10 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import SearchIcon from '../../SVG/SearchIcon';
 import SearchContainer from './SearchContainer';
 import { productContext } from '../../Providers';
+import { useHref } from 'react-router-dom';
 
 function SearchBar() {
   const { products } = useContext(productContext)
+  const link = useHref()
 
 
   const [searchOpen, setSearchOpen] = useState(false)
@@ -21,6 +23,13 @@ function SearchBar() {
 
     setSearchOpen(true)
   }
+
+
+  useEffect(() => {
+    if (link !== "/") {
+      setSearchOpen(false)
+    }
+  }, [link])
 
   return (
     <div className="relative lg:w-1/2 2xl:w-6/7 flex justify-center">

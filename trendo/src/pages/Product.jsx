@@ -23,10 +23,14 @@ const Product = () => {
 
   return (
     <div className='relative h-full'>
-      <div className='bg-customGrey h-full absolute bottom-0 w-1/3 -z-10 lg:block hidden' />
+      <div className='bg-customGrey h-full absolute bottom-0 w-2/4 -z-10 lg:block hidden' />
 
       <div className='py-[4.5rem] wrapper flex gap-[6.813rem] font-barlow flex-col xl:flex-row'>
-        <img className='object-cover' src={product?.image.url} alt={product?.image.alt} />
+        <div className='relative'>
+          <img className='object-cover rounded' src={product?.image.url} alt={product?.image.alt} />
+          <span className='bg-customGrey absolute bottom-1.5 rounded right-1.5 px-5 py-1 uppercase font-medium shadow-md text-sm lg:text-base'>sale</span>
+        </div>
+
 
         <div className='space-y-11 flex flex-col'>
           <div className='flex items-center gap-4 flex-wrap'>
@@ -78,8 +82,8 @@ const Product = () => {
           <div className='flex items-start justify-start lg:gap-7 lg:flex-row flex-col lg:items-center'>
             {product?.price > product?.discountedPrice ?
               <>
-                <span className='font-semibold text-2xl'>{formattedPrice(product?.price)}</span>
-                <span className='font-semibold text-xl line-through text-gray-neutral'>{formattedPrice(product?.discountedPrice)}</span>
+                <span className='font-semibold text-2xl'>{formattedPrice(product?.discountedPrice)}</span>
+                <span className='font-semibold text-xl line-through text-gray-neutral'>{formattedPrice(product?.price)}</span>
               </> :
               <span className='font-semibold text-2xl'>{formattedPrice(product?.price)}</span>
             }

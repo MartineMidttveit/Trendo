@@ -1,6 +1,6 @@
 import React from 'react';
 import Newsletter from './Newsletter';
-import { useParams, useHref } from 'react-router-dom';
+import { useParams, useHref, Link } from 'react-router-dom';
 
 
 function Footer() {
@@ -21,7 +21,7 @@ function Footer() {
         >
             {productId === undefined &&
                 <div className='wrapper flex flex-col lg:flex-row lg:justify-between mx-auto w-full'>
-                    <h3 className='text-left text-lg 2xl:text-xl font-bold my-4 lg:my-0'>Trendo</h3>
+                    <Link className='text-left text-lg 2xl:text-xl font-bold my-4 lg:my-0' to='/'>Trendo</Link>
 
                     <div className='flex w-full lg:w-1/2 flex-col lg:flex-row lg:justify-between text-left'>
 
@@ -34,7 +34,7 @@ function Footer() {
 
                         <div className='flex flex-col gap-1.5 lg:gap-3 mb-5'>
                             <h4 className='font-medium 2xl:text-lg'>Contact</h4>
-                            <p className='text-sm lg:text-base'>Contact us</p>
+                            <Link to='/contact' className='text-sm lg:text-base'>Contact us</Link>
                             <p className='text-sm lg:text-base'>FAQ</p>
                             <p className='text-sm lg:text-base'>Phone: +47 65 76 78 76</p>
                             <p className='text-sm lg:text-base'>Mail: <span className='underline'>support@trendo.com</span></p>
