@@ -12,7 +12,6 @@ const Product = () => {
   const { products } = useContext(productContext)
   const { addItemToCart } = useCart()
 
-
   const formattedPrice = useCurrencyFormatter()
   const product = products?.find(product => product.id === productId)
   const hasMoreThanOneReview = product?.reviews.length > 1
@@ -22,17 +21,18 @@ const Product = () => {
   }, [])
 
   return (
-    <div className='relative h-full'>
-      <div className='bg-customGrey h-full absolute bottom-0 w-2/4 -z-10 lg:block hidden' />
+    <div className='flex wrapper bg-customGrey'>
+      <div className=' h-screen w-1/3 lg:block relative'>
 
-      <div className='py-[4.5rem] wrapper flex gap-[6.813rem] font-barlow flex-col xl:flex-row'>
-        <div className='relative'>
-          <img className='object-cover rounded' src={product?.image.url} alt={product?.image.alt} />
-          <span className='bg-customGrey absolute bottom-1.5 rounded right-1.5 px-5 py-1 uppercase font-medium shadow-md text-sm lg:text-base'>sale</span>
+        <div className='py-[4.5rem] flex gap-[6.813rem] font-barlow flex-col xl:flex-row'>
+          <div className='relative'>
+            <img className='object-cover rounded h-[42rem] w-[36rem]' src={product?.image.url} alt={product?.image.alt} />
+            <span className='bg-customGrey absolute top-6 rounded right-6 px-5 py-1 uppercase font-medium shadow-md text-sm lg:text-base'>sale</span>
+          </div>
         </div>
+      </div>
 
-
-        <div className='space-y-11 flex flex-col'>
+      <div className='space-y-11 flex flex-col bg-white py-[4.5rem] px-14 w-1/2'>
           <div className='flex items-center gap-4 flex-wrap'>
             <span className='text-lg text-gray-neutral font-medium'>All products</span>
             {product?.tags.map((tag, index) => (
@@ -48,7 +48,6 @@ const Product = () => {
               {product?.title}
             </span>
           </div>
-
 
           <div className='flex flex-col items-start gap-4'>
             <h1 className='text-3xl font-semibold'>{product?.title}</h1>
@@ -89,19 +88,16 @@ const Product = () => {
             }
           </div>
 
-
           <span className='text-lg leading-5 text-left block'>{product?.description}</span>
 
-
           <div className='flex items-center gap-8 lg:flex-row flex-col'>
-            <button type='button' className='bg-beige-reddish text-black text-lg max-w-[10.438rem] h-11 w-full rounded-[38px]' onClick={() => addItemToCart(product)}>Add to cart</button>
+            <button type='button' className='bg-customOrange text-black text-lg max-w-[10.438rem] h-11 w-full rounded-[38px]' onClick={() => addItemToCart(product)}>Add to cart</button>
             <button type='button' className='flex items-center gap-3 text-lg'><HeartIcon /> Save to wishlist</button>
           </div>
 
           <p className='text-gray-neutral text-lg leading-none text-left'>Standard delivery in 4-5 days or Express Shipping 1-2 days.</p>
         </div>
       </div>
-    </div>
   )
 }
 
