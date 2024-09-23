@@ -34,11 +34,11 @@ const Product = () => {
 
       <div className='space-y-11 flex flex-col bg-white py-[4.5rem] px-14 w-1/2'>
           <div className='flex items-center gap-4 flex-wrap'>
-            <span className='text-lg text-gray-neutral font-medium'>All products</span>
+            <span className='text-lg text-secondary font-medium'>All products</span>
             {product?.tags.map((tag, index) => (
               <React.Fragment key={index + 1}>
-                <ChevronRight className='fill-gray-neutral' />
-                <span className='text-lg font-medium capitalize text-gray-neutral'>
+                <ChevronRight className='fill-secondary' />
+                <span className='text-lg font-medium capitalize text-secondary'>
                   {tag}
                 </span>
               </React.Fragment>
@@ -52,7 +52,7 @@ const Product = () => {
           <div className='flex flex-col items-start gap-4'>
             <h1 className='text-3xl font-semibold'>{product?.title}</h1>
             <div className='flex items-center gap-5 flex-wrap'>
-              {product?.rating === 0 ? <span className='text-gray-neutral text-lg'>No reviews yet</span> :
+              {product?.rating === 0 ? <span className='text-secondary text-lg'>No reviews yet</span> :
                 <>
                   <div className='flex items-center gap-1.5'>
                     {Array(Math.floor(product?.rating || 0)).fill(0).map((_, index) => (
@@ -69,7 +69,7 @@ const Product = () => {
 
                   <span className='text-lg font-medium'>{product?.rating.toFixed(1)} / 5.0</span>
 
-                  <span className='text-gray-neutral text-lg'>
+                  <span className='text-secondary text-lg'>
                     (based on {product?.reviews.length}{' '}
                     {hasMoreThanOneReview ? 'reviews' : 'review'})
                   </span>
@@ -82,7 +82,7 @@ const Product = () => {
             {product?.price > product?.discountedPrice ?
               <>
                 <span className='font-semibold text-2xl'>{formattedPrice(product?.discountedPrice)}</span>
-                <span className='font-semibold text-xl line-through text-gray-neutral'>{formattedPrice(product?.price)}</span>
+                <span className='font-semibold text-xl line-through text-secondary'>{formattedPrice(product?.price)}</span>
               </> :
               <span className='font-semibold text-2xl'>{formattedPrice(product?.price)}</span>
             }
@@ -95,7 +95,7 @@ const Product = () => {
             <button type='button' className='flex items-center gap-3 text-lg'><HeartIcon /> Save to wishlist</button>
           </div>
 
-          <p className='text-gray-neutral text-lg leading-none text-left'>Standard delivery in 4-5 days or Express Shipping 1-2 days.</p>
+          <p className='text-secondary text-lg leading-none text-left'>Standard delivery in 4-5 days or Express Shipping 1-2 days.</p>
         </div>
       </div>
   )

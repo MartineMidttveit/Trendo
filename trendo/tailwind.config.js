@@ -12,8 +12,6 @@ module.exports = {
         secondary: '#6B6B6B',
         customGrey: '#FAF8F6',
         customDarkGray: '#F3F1EE',
-        'gray-neutral': '#959595',
-        'beige-reddish': '#D6A689'
       },
       fontFamily: {
         barlow: ['Barlow', 'sans-serif'],
