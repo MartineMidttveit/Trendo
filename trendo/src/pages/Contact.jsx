@@ -79,7 +79,7 @@ export default function Contact() {
                                 <div className="flex flex-col w-full">
                                     <label className="flex items-center justify-between font-semibold" htmlFor="phone">
                                         Phone Number:
-                                        <span className="text-gray-neutral text-base">(optional)</span>
+                                        <span className="text-secondary text-base">(optional)</span>
                                     </label>
                                     <input
                                         type="text"

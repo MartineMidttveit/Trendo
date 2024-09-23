@@ -49,7 +49,7 @@ const Cart = () => {
                     <div className='lg:hidden flex flex-col justify-start items-start gap-3'>
                       <div className='flex flex-col gap-1'>
                         {product.tags.map(tag => (
-                          <div className="text-base text-gray-neutral text-left leading-none capitalize">{tag}</div>
+                          <div className="text-base text-secondary text-left leading-none capitalize">{tag}</div>
                         ))}
 
                         <div className="font-semibold text-lg">{product.title}</div>
@@ -71,7 +71,7 @@ const Cart = () => {
                     </div>
                     <div className='hidden lg:block space-y-1.5'>
                       {product.tags.map(tag => (
-                        <div className="text-base text-gray-neutral text-left leading-none capitalize">{tag}</div>
+                        <div className="text-base text-secondary text-left leading-none capitalize">{tag}</div>
                       ))}
 
                       <div className="font-semibold text-base text-left capitalize leading-none">{product.title}</div>
