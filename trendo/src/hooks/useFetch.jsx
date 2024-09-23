@@ -15,10 +15,10 @@ export default function useFetch(id = "") {
             const res = await fetch(url);
             const data = await res.json()
             setValue(data.data)
-    }
-    
+        }
 
-    fetchData()
+
+        fetchData()
     }, [])
 
     return [value, setValue];

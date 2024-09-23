@@ -3,23 +3,22 @@ import useFetch from "../hooks/useFetch";
 
 
 
-export const productContext =  createContext()
+export const productContext = createContext()
 
-export function ProductProvider({children}) {
+export function ProductProvider({ children }) {
+    const [products, setProducts] = useFetch()
 
-   
-    const [products, setProducts] = useFetch() 
-
-    return(
-        <productContext.Provider value={{products, setProducts}}>{children}</productContext.Provider>
-
+    return (
+        <productContext.Provider value={{ products, setProducts }}>
+            {children}
+        </productContext.Provider>
     )
-   
+
 
 }
 
-export default function Providers({children}) {
+export default function Providers({ children }) {
 
 
-    return(<ProductProvider>{children}</ProductProvider>)
+    return (<ProductProvider>{children}</ProductProvider>)
 }
