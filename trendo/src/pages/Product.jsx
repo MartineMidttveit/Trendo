@@ -21,30 +21,30 @@ const Product = () => {
   }, [])
 
   return (
-    <div className='flex wrapper bg-customGrey'>
-      <div className=' h-screen w-1/3 lg:block relative'>
+    <div className='flex wrapper bg-customGrey flex-col lg:flex-row w-full'>
+      <div className='lg:h-screen lg:w-2/5 lg:block relative'>
 
-        <div className='py-[4.5rem] flex gap-[6.813rem] font-barlow flex-col xl:flex-row'>
-          <div className='relative'>
-            <img className='object-cover rounded h-[42rem] w-[36rem]' src={product?.image.url} alt={product?.image.alt} />
+        <div className='py-12 lg:py-20 flex justify-center font-barlow flex-col xl:flex-row'>
+          <div className='relative flex justify-center'>
+            <img className='object-cover rounded w-2/3 lg:w-full aspect-square' src={product?.image.url} alt={product?.image.alt} />
             <span className='bg-customGrey absolute top-6 rounded right-6 px-5 py-1 uppercase font-medium shadow-md text-sm lg:text-base'>sale</span>
           </div>
         </div>
       </div>
 
-      <div className='space-y-11 flex flex-col bg-white py-[4.5rem] px-14 w-1/2'>
-          <div className='flex items-center gap-4 flex-wrap'>
-            <span className='text-lg text-secondary font-medium'>All products</span>
+      <div className='space-y-11 flex flex-col bg-white py-[4.5rem] px-14 lg:w-1/2 w-full'>
+          <div className='flex items-center gap-2 lg:gap-4 flex-wrap text-sm md:text-base lg:text-lg'>
+            <span className='text-secondary font-medium'>All products</span>
             {product?.tags.map((tag, index) => (
               <React.Fragment key={index + 1}>
                 <ChevronRight className='fill-secondary' />
-                <span className='text-lg font-medium capitalize text-secondary'>
+                <span className='font-medium capitalize text-secondary'>
                   {tag}
                 </span>
               </React.Fragment>
             ))}
             <ChevronRight className='fill-black' />
-            <span className='text-lg font-medium capitalize text-black'>
+            <span className='font-medium capitalize text-black'>
               {product?.title}
             </span>
           </div>
