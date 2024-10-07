@@ -13,6 +13,9 @@ module.exports = {
         customGrey: '#FAF8F6',
         customDarkGray: '#F3F1EE',
       },
+      screens: {
+        xs: '430px'
+      },
       fontFamily: {
         barlow: ['Barlow', 'sans-serif'],
       },
