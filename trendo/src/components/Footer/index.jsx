@@ -23,7 +23,7 @@ function Footer() {
                 <div className='wrapper flex flex-col lg:flex-row lg:justify-between mx-auto w-full'>
                     <Link className='text-left text-lg 2xl:text-xl font-bold my-4 lg:my-0' to='/'>Trendo</Link>
 
-                    <div className='flex w-full lg:w-1/2 flex-col lg:flex-row lg:justify-between text-left'>
+                    <div className='flex w-full lg:w-3/4 2xl:w-1/2 flex-col lg:flex-row lg:justify-between text-left'>
 
                         <div className='flex flex-col gap-1.5 lg:gap-3 mb-5'>
                             <h4 className='font-medium 2xl:text-lg'>Terms</h4>
