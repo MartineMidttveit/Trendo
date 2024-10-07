@@ -37,10 +37,6 @@ input::placeholder {
 
 /* Medium screens (md) - min-width: 768px */
 .wrapper {
-  padding-left: 6.5%;
-  padding-right: 6.5%;
-}
-
-.wrapper-left {
-  padding-left: 6.5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }

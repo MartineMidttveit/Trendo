@@ -37,7 +37,7 @@ const Cart = () => {
               {cart.map(product => (
                 <React.Fragment key={product.id}>
                   <div className="grid grid-cols-2 md:grid-cols-3 items-center justify-between w-full xl:px-8">
-                    <img className="w-32 rounded object-cover" src={product.image.url} alt={product.image.alt} />
+                    <img className="w-32 h-36 rounded object-cover" src={product.image.url} alt={product.image.alt} />
 
                     <div className='md:hidden flex flex-col justify-start items-start gap-3'>
                       <div className='flex flex-col gap-1'>
@@ -93,8 +93,8 @@ const Cart = () => {
         </div>
       </div>
 
-      <div className='wrapper mt-10 2xl:mt-20 w-full flex flex-col lg:flex-row xl:flex-col gap-9 items-baseline 2xl:w-2/5'>
-        <div className='bg-customGrey w-full 2xl:w-[32rem] p-10 rounded'>
+      <div className='pl-10 pr-[6.5%] mt-10 2xl:mt-20 w-full flex flex-col lg:flex-row xl:flex-col gap-9 items-baseline 2xl:w-3/4 xl:w-2/3'>
+        <div className='bg-customGrey w-full p-8 2xl:p-10 rounded'>
           <strong className='text-lg font-semibold block text-left mb-6'>Cart summary</strong>
           <div className='flex flex-col text-left w-full'>
             <span className='text-lg mb-4'>Subtotal:</span>
@@ -128,12 +128,12 @@ const Cart = () => {
         </div>
 
       <div className='w-full'>
-        <div className='bg-customGrey w-full 2xl:w-[32rem] p-10 rounded mb-10'>
+        <div className='bg-customGrey w-full p-10 rounded mb-10'>
           <strong className='text-lg font-semibold block text-left mb-6'>Got a gift card or coupon code?</strong>
           <input className='w-full h-14 bg-white border border-black rounded-md px-5' placeholder='Coupon code' />
         </div>
 
-        <div className='flex lg:gap-2.5 gap-5 pb-10 2xl:w-[32rem]'>
+        <div className='flex lg:gap-2.5 gap-5 pb-10'>
           <Link className='lg:w-2/4 w-full' to="/">
             <button className='rounded ring-1 ring-black uppercase p-4 w-full font-medium'>Shop More</button>
           </Link>
