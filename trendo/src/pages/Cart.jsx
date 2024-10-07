@@ -93,7 +93,7 @@ const Cart = () => {
         </div>
       </div>
 
-      <div className='pl-10 pr-[6.5%] mt-10 2xl:mt-20 w-full flex flex-col lg:flex-row xl:flex-col gap-9 items-baseline 2xl:w-3/4 xl:w-2/3'>
+      <div className='pl-10 pr-[6.5%] mt-10 2xl:mt-20 w-full flex flex-col lg:flex-row xl:flex-col gap-9 items-baseline xl:w-2/3'>
         <div className='bg-customGrey w-full p-8 2xl:p-10 rounded'>
           <strong className='text-lg font-semibold block text-left mb-6'>Cart summary</strong>
           <div className='flex flex-col text-left w-full'>
