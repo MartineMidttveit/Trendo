@@ -32,7 +32,7 @@ const Product = () => {
         </div>
       </div>
 
-      <div className='space-y-11 flex flex-col bg-white py-[4.5rem] px-14 lg:w-1/2 w-full'>
+      <div className='space-y-6 xl:space-y-10 flex flex-col bg-white p-8 xl:p-14 lg:w-1/2 w-full lg:m-10'>
           <div className='flex items-center gap-2 lg:gap-4 flex-wrap text-sm md:text-base lg:text-lg'>
             <span className='text-secondary font-medium'>All products</span>
             {product?.tags.map((tag, index) => (
@@ -49,10 +49,10 @@ const Product = () => {
             </span>
           </div>
 
-          <div className='flex flex-col items-start gap-4'>
-            <h1 className='text-3xl font-semibold'>{product?.title}</h1>
-            <div className='flex items-center gap-5 flex-wrap'>
-              {product?.rating === 0 ? <span className='text-secondary text-lg'>No reviews yet</span> :
+          <div className='flex flex-col items-start gap-2 xl:gap-4'>
+            <h1 className='text-lg md:text-2xl xl:text-3xl font-bold xl:font-semibold'>{product?.title}</h1>
+            <div className='flex items-center gap-2 md:gap-3 xl:gap-5 flex-wrap'>
+              {product?.rating === 0 ? <span className='text-secondary text-sm md:text-base 2xl:text-lg'>No reviews yet</span> :
                 <>
                   <div className='flex items-center gap-1.5'>
                     {Array(Math.floor(product?.rating || 0)).fill(0).map((_, index) => (
@@ -67,9 +67,9 @@ const Product = () => {
                     )}
                   </div>
 
-                  <span className='text-lg font-medium'>{product?.rating.toFixed(1)} / 5.0</span>
+                  <span className='text-sm md:text-base 2xl:text-lg font-medium'>{product?.rating.toFixed(1)} / 5.0</span>
 
-                  <span className='text-secondary text-lg'>
+                  <span className='text-secondary text-sm md:text-base 2xl:text-lg'>
                     (based on {product?.reviews.length}{' '}
                     {hasMoreThanOneReview ? 'reviews' : 'review'})
                   </span>
@@ -81,21 +81,21 @@ const Product = () => {
           <div className='flex items-start justify-start lg:gap-7 lg:flex-row flex-col lg:items-center'>
             {product?.price > product?.discountedPrice ?
               <>
-                <span className='font-semibold text-2xl'>{formattedPrice(product?.discountedPrice)}</span>
-                <span className='font-semibold text-xl line-through text-secondary'>{formattedPrice(product?.price)}</span>
+                <span className='font-semibold text-lg md:text-xl xl:text-2xl'>{formattedPrice(product?.discountedPrice)}</span>
+                <span className='font-semibold line-through text-secondary text-lg md:text-xl xl:text-2xl'>{formattedPrice(product?.price)}</span>
               </> :
-              <span className='font-semibold text-2xl'>{formattedPrice(product?.price)}</span>
+              <span className='font-semibold text-lg md:text-xl xl:text-2xl'>{formattedPrice(product?.price)}</span>
             }
           </div>
 
-          <span className='text-lg leading-5 text-left block'>{product?.description}</span>
+          <span className='2xl:text-lg leading-5 text-left block'>{product?.description}</span>
 
-          <div className='flex items-center gap-8 lg:flex-row flex-col'>
-            <button type='button' className='bg-customOrange text-black text-lg max-w-[10.438rem] h-11 w-full rounded-[38px]' onClick={() => addItemToCart(product)}>Add to cart</button>
-            <button type='button' className='flex items-center gap-3 text-lg'><HeartIcon /> Save to wishlist</button>
+          <div className='flex items-center gap-4 xl:gap-8'>
+            <button type='button' className='bg-customOrange text-black 2xl:text-lg max-w-[10rem] h-10 w-full rounded-full' onClick={() => addItemToCart(product)}>Add to cart</button>
+            <button type='button' className='flex items-center gap-3 2xl:text-lg'><HeartIcon /> Save to wishlist</button>
           </div>
 
-          <p className='text-secondary text-lg leading-none text-left'>Standard delivery in 4-5 days or Express Shipping 1-2 days.</p>
+          <p className='text-secondary text-sm md:text-base 2xl:text-lg leading-none text-left'>Standard delivery in 4-5 days or Express Shipping 1-2 days.</p>
         </div>
       </div>
   )
