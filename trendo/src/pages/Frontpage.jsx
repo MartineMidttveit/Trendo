@@ -7,7 +7,6 @@ function Frontpage() {
 
   const { products } = useContext(productContext)
 
-
   return (
     <main className="text-primary font-barlow relative">
       <div className="bg-customGrey shadow-lg">

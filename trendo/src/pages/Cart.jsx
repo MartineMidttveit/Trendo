@@ -11,16 +11,13 @@ const Cart = () => {
   const formattedPrice = useCurrencyFormatter()
 
   return (
-    <div className='flex flex-col lg:flex-row'>
+    <div className='flex flex-col xl:flex-row pb-12'>
       <div
-        className='font-barlow bg-customGrey lg:w-2/3 w-full wrapper'
-        style={{
-          height: 'calc(100vh - 9.1rem)'
-        }}
+        className='font-barlow bg-customGrey w-full wrapper'
       >
         <div className='my-16'>
           <div className='flex flex-col text-left gap-5'>
-            <strong className='font-semibold text-3xl'>
+            <strong className='font-bold 2xl:font-semibold text-2xl 2xl:text-3xl'>
               Shopping cart
             </strong>
             <strong className='text-lg font-normal'>
@@ -29,24 +26,20 @@ const Cart = () => {
             </strong>
           </div>
 
-
-
-
-          <div className='mt-12 bg-white rounded p-6'>
-            <div className="grid-cols-3 gap-6 text-lg 2xl:grid hidden">
+          <div className='mt-8 2xl:mt-12 bg-white rounded p-6'>
+            <div className="gap-6 text-lg lg:grid hidden grid-cols-3 px-8 py-6 xl:py-2">
               <div className="text-left font-semibold">Product</div>
               <div className="font-semibold">Price</div>
               <div className="text-left font-semibold">Quantity</div>
             </div>
 
-
-            <div className="grid 2xl:grid-cols-3 xl:grid-cols-2 grid-cols-1 gap-6 items-center justify-items-start xl:justify-items-stretch py-4 border-b">
+            <div className="flex flex-col gap-6 items-center justify-between xl:justify-items-stretch py-4">
               {cart.map(product => (
                 <React.Fragment key={product.id}>
-                  <div className="flex items-center space-x-6">
+                  <div className="grid grid-cols-2 md:grid-cols-3 items-center justify-between w-full xl:px-8">
                     <img className="w-32 rounded object-cover" src={product.image.url} alt={product.image.alt} />
 
-                    <div className='lg:hidden flex flex-col justify-start items-start gap-3'>
+                    <div className='md:hidden flex flex-col justify-start items-start gap-3'>
                       <div className='flex flex-col gap-1'>
                         {product.tags.map(tag => (
                           <div className="text-base text-secondary text-left leading-none capitalize">{tag}</div>
@@ -54,6 +47,7 @@ const Cart = () => {
 
                         <div className="font-semibold text-lg">{product.title}</div>
                       </div>
+    
                       <div className='flex gap-1'>
                         <span className="text-gray-400 line-through">{formattedPrice(product?.price)}</span>
                         <span className="font-bold">{formattedPrice(product?.discountedPrice)}</span>
@@ -69,20 +63,19 @@ const Cart = () => {
                         </button>
                       </div>
                     </div>
-                    <div className='hidden lg:block space-y-1.5'>
+                    <div className='hidden md:block space-y-1.5'>
                       {product.tags.map(tag => (
                         <div className="text-base text-secondary text-left leading-none capitalize">{tag}</div>
                       ))}
 
                       <div className="font-semibold text-base text-left capitalize leading-none">{product.title}</div>
                     </div>
-                  </div>
-                  <div className='lg:flex-col lg:gap-0 gap-2.5 lg:flex hidden'>
-                    <span className="text-gray-400 line-through">{formattedPrice(product?.price)}</span>
-                    <span className="font-bold">{formattedPrice(product?.discountedPrice)}</span>
+                    <div className='md:flex-col md:gap-0 gap-2.5 md:flex hidden'>
+                      <span className="text-gray-400 line-through">{formattedPrice(product?.price)}</span>
+                      <span className="font-bold">{formattedPrice(product?.discountedPrice)}</span>
                   </div>
 
-                  <div className='items-center gap-5 hidden lg:flex'>
+                  <div className='items-center gap-5 hidden md:flex'>
                     <button type='button' onClick={() => decreaseQuantity(product.id)}>
                       <MinusCircleIcon />
                     </button>
@@ -91,6 +84,8 @@ const Cart = () => {
                       <PlusCircleIcon />
                     </button>
                   </div>
+                  </div>
+                  
                 </React.Fragment>
               ))}
             </div>
@@ -98,15 +93,15 @@ const Cart = () => {
         </div>
       </div>
 
-      <div className='wrapper mt-20 space-y-9'>
-        <div className='bg-customGrey w-full lg:w-[28.125rem] h-[18.688rem] p-10 rounded'>
+      <div className='wrapper mt-10 2xl:mt-20 w-full flex flex-col lg:flex-row xl:flex-col gap-9 items-baseline 2xl:w-2/5'>
+        <div className='bg-customGrey w-full 2xl:w-[32rem] p-10 rounded'>
           <strong className='text-lg font-semibold block text-left mb-6'>Cart summary</strong>
-          <div className='flex items-center justify-between'>
-            <span className='text-lg'>Subtotal:</span>
+          <div className='flex flex-col text-left w-full'>
+            <span className='text-lg mb-4'>Subtotal:</span>
             <div>
               {cart.map(product => (
-                <div key={product.id} className='flex flex-col items-end'>
-                  <span className='font-semibold'>{product.title} {product.quantity}x</span>
+                <div key={product.id} className='flex justify-between w-full'>
+                  <span className='font-semibold'>{product.quantity} {product.title}</span>
                   <span>{formattedPrice(product.discountedPrice * product.quantity)}</span>
                 </div>
               ))}
@@ -114,7 +109,7 @@ const Cart = () => {
 
           </div>
 
-          <div className='flex items-center justify-between'>
+          <div className='flex items-center justify-between mt-4'>
             <span className='text-lg'>Taxes:</span>
             <span>$ 2</span>
           </div>
@@ -126,30 +121,30 @@ const Cart = () => {
 
           <div className='h-px w-full bg-black my-9' />
 
-
           <div className='flex items-center justify-between text-lg font-semibold'>
             <span>Total:</span>
             <span>{formattedPrice(totalPrice)}</span>
           </div>
         </div>
 
-        <div className='bg-customGrey w-full lg:w-[28.125rem] p-10 rounded'>
+      <div className='w-full'>
+        <div className='bg-customGrey w-full 2xl:w-[32rem] p-10 rounded mb-10'>
           <strong className='text-lg font-semibold block text-left mb-6'>Got a gift card or coupon code?</strong>
           <input className='w-full h-14 bg-white border border-black rounded-md px-5' placeholder='Coupon code' />
         </div>
 
-        <div className='flex lg:gap-2.5 gap-5 lg:flex-row flex-col pb-10'>
+        <div className='flex lg:gap-2.5 gap-5 pb-10 2xl:w-[32rem]'>
           <Link className='lg:w-2/4 w-full' to="/">
-            <button className='rounded ring-1 ring-black uppercase p-4 w-full'>Shop More</button>
+            <button className='rounded ring-1 ring-black uppercase p-4 w-full font-medium'>Shop More</button>
           </Link>
           <Link className='lg:w-2/4 w-full' to="/checkout">
-            <button className='rounded bg-beige-reddish uppercase p-4 w-full'>Checkout</button>
+            <button className='rounded bg-customOrange uppercase p-4 w-full font-mediu'>Checkout</button>
           </Link>
         </div>
       </div>
-
+        
+      </div>
     </div>
-
   )
 }
 

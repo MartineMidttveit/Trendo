@@ -17,7 +17,6 @@ const Checkout = () => {
           Shop more
         </Link>
 
-
         <div className='bg-white flex items-center justify-center flex-col lg:w-[47rem] py-16 mt-6'>
           <CheckCircleIcon />
 
