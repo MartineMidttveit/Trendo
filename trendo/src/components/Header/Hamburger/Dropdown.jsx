@@ -26,13 +26,13 @@ function Dropdown({ isMenuOpen }) {
         </div>
       </div>
 
-      <a href="/" className="py-4 border-b border-primary w-full text-center">
-        Home
-      </a>
-      <a href="/contact" className="py-4 w-full text-center">
-        Contact
-      </a>
+      <Link to="/" className="py-4 border-b border-primary w-full text-center">Home</Link>
+
+      <Link to="/contact" className="py-4 w-full text-center">Contact</Link>
+     
     </div>
+
+    
   );
 }
 
