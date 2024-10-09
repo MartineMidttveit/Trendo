@@ -23,7 +23,7 @@ function Header() {
       <div className="flex justify-between items-center wrapper py-6 2xl:text-lg text-primary bg-customGrey shadow-lg">
         <Link to="/" className="font-bold text-2xl 2xl:text-4xl w-1/4 xl:w-2/5 flex items-start">Trendo</Link>
 
-        <SearchBar />
+        <SearchBar className="lg:flex hidden" />
 
         <nav className="hidden lg:flex w-1/4 xl:w-2/5 justify-end items-center">
           <Link to="/">Home</Link>
